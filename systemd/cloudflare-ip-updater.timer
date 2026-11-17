@@ -1,0 +1,11 @@
+[Unit]
+Description=Weekly Cloudflare IP range synchronization
+
+[Timer]
+OnCalendar=weekly
+Persistent=true
+RandomizedDelaySec=1h
+Unit=cloudflare-ip-updater.service
+
+[Install]
+WantedBy=timers.target
